@@ -1,8 +1,8 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
-  "productName": "shearforce_bendingmoment",
+  "productName": "shearforce-bendingmoment",
   "version": "0.1.0",
-  "identifier": "com.shearforce_bendingmoment.app",
+  "identifier": "com.shearforce-bendingmoment.app",
   "build": {
     "frontendDist": "../src"
   },
@@ -10,7 +10,7 @@
     "withGlobalTauri": true,
     "windows": [
       {
-        "title": "shearforce_bendingmoment",
+        "title": "shearforce-bendingmoment",
         "width": 800,
         "height": 1000
       }
