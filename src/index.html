@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tauri App</title>
+    <script type="module" src="/main.js" defer></script>
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+  </head>
+
+  <body>
+    <main class="container">
+      <h1>Shear Force and Bending Moment Calculator</h1>
+      <p>Change the beam geometry with [Make Beam]</p>
+      <p>Add different loads and [Plot] the results.</p>
+      <img src = "./assets/beam_example.png">
+      <table class="row">
+        <tr>
+          <th>Span:</th>
+          <th><input id="spanin" placeholder="15 m..." /></th>
+          <th></th>
+        </tr>
+        <tr>
+          <th>A:</th>
+          <th><input id="ain" placeholder="5 m..." /></th>
+          <th></th>
+          <th></th>
+        </tr>
+        <tr>
+          <th>B:</th>
+          <th><input id="bin" placeholder="10 m..." /></th>
+          <th></th>
+          <th></th>
+          <th><button id="makebeam">Make Beam</button></th>
+        </tr>
+        <tr class="septop">
+          <th>x:</th>
+          <th><input id="plxin" placeholder="6 m..." /></th>
+          <th>Fx:</th>
+          <th><input id="plfxin" placeholder="0 N..." /></th>
+          <th></th>
+        </tr>
+        <tr class="sepbot">
+          <th></th>
+          <th></th>
+          <th>Fy:</th>
+          <th><input id="plfyin" placeholder="-90 N..." /></th>
+          <th><button id="addpl">Add Point Load</button></th>
+        </tr>
+        <tr class="sepbot">
+          <th>x:</th>
+          <th><input id="pmxin" placeholder="13 m..." /></th>
+          <th>Fm:</th>
+          <th><input id="pmmin" placeholder="50 Nm..." /></th>
+          <th><button id="addpm">Add Point Moment</button></th>
+        </tr>
+        <tr>
+          <th>x1:</th>
+          <th><input id="ulx1in" placeholder="8 m..." /></th>
+          <th>x2:</th>
+          <th><input id="ulx2in" placeholder="13 m..." /></th>
+        </tr>
+        <tr class="sepbot">
+          <th>Fy:</th>
+          <th><input id="ulfyin" placeholder="-90 N..." /></th>
+          <th></th>
+          <th></th>
+          <th><button id="addul" >Add Uniform Load</button></th>
+        </tr>
+        <tr>
+          <th>x1:</th>
+          <th><input id="llx1in" placeholder="8 m..." /></th>
+          <th>x2:</th>
+          <th><input id="llx2in" placeholder="13 m..." /></th>
+        </tr>
+        <tr class="sepbot">
+          <th>Fy1:</th>
+          <th><input id="llfy1in" placeholder="-90 N..." /></th>
+          <th>Fy2:</th>
+          <th><input id="llfy2in" placeholder="0 N..." /></th>
+          <th><button id="addll" >Add Linear Load</button></th>
+        </tr>
+        <tr>
+          <th></th>
+          <th></th>
+          <th><button id="exec">Plot Beam</button></th>
+          <th><button id="rst">Reset</button></th>
+        </tr>
+      </table>
+      <p><div id="plot"></div></p> 
+    </main>
+  </body>
+</html>
